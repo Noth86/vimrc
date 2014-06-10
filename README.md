@@ -3,7 +3,7 @@ Requirements:
 - vim-fugitive
 - nerdtree
 - vim-airline
-- vim-womprat
+- lightline
 
 Instructions:
 - git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
