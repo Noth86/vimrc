@@ -1,3 +1,4 @@
+set list
 set nowrap
 set nocompatible              " be iMproved
 filetype off                  " required!
@@ -12,7 +13,7 @@ Bundle 'gmarik/vundle'
 " Bundles
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
-Bundle 'bling/vim-airline'
+Bundle 'itchyny/lightline.vim'
 
 " Active plugin
 filetype plugin indent on
@@ -23,20 +24,6 @@ Bundle 'jtai/vim-womprat'
 " NERDTree configuration
 let g:NERDTreeDirArrows=0
 autocmd vimenter * if !argc() | NERDTree | endif
-
-" Airline configuration
-let g:airline_powerline_fonts = 1
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-endif
-let g:airline_left_sep = '⮀'
-let g:airline_left_alt_sep = '⮁'
-let g:airline_right_sep = '⮂'
-let g:airline_right_alt_sep = '⮃'
-let g:airline_symbols.branch = '⭠'
-let g:airline_symbols.readonly = '⭤'
-let g:airline_symbols.linenr = '⭡'
-let g:airline#extensions#branch#enabled = 1
 
 " General
 syntax on
@@ -74,7 +61,7 @@ let g:lightline = {
       \ },
       \ 'component_function': {
       \   'modified': 'MyModified',
-      \   'readonly': 'MyReadonly',
+      \   'readonly': '&{&readonly?"⭤":""}',
       \   'fugitive': 'MyFugitive',
       \   'filename': 'MyFilename',
       \   'fileformat': 'MyFileformat',
@@ -82,8 +69,8 @@ let g:lightline = {
       \   'fileencoding': 'MyFileencoding',
       \   'mode': 'MyMode',
       \ },
-      \ 'separator': { 'left': 'â®<80>', 'right': 'â®<82>' },
-      \ 'subseparator': { 'left': 'â®<81>', 'right': 'â®<83>' }
+      \ 'separator': { 'left': '⮀', 'right': '⮂' },
+      \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
       \ }
 
 function! MyModified()
@@ -91,7 +78,7 @@ function! MyModified()
 endfunction
 
 function! MyReadonly()
-  return &ft !~? 'help\|vimfiler\|gundo' && &readonly ? 'â­¤' : ''
+  return &ft !~? 'help\|vimfiler\|gundo' && &readonly ? '⭤' : ''
 endfunction
 
 function! MyFilename()
@@ -112,7 +99,7 @@ function! MyFugitive()
     if expand('%:t') !~? 'Tagbar\|Gundo\|NERD' && &ft !~? 'vimfiler' && exists('*fugitive#head')
       let mark = ''  " edit here for cool mark
       let _ = fugitive#head()
-      return strlen(_) ? 'â­  '._ : ''
+      return strlen(_) ? '⭠'._ : ''
     endif
   catch
   endtry
