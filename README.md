@@ -1,4 +1,4 @@
-Requirements:
+It will install:
 - Vundle
 - vim-fugitive
 - nerdtree
@@ -11,4 +11,3 @@ Instructions:
 - Launch vim, skip errors and run :BundleInstall
 
 Ready!
-
