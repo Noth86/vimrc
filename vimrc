@@ -22,6 +22,9 @@ filetype plugin indent on
 " Theme
 Bundle 'jtai/vim-womprat'
 
+" JSHint configuration
+let JSHintUpdateWriteOnly=1
+
 " NERDTree configuration
 let g:NERDTreeDirArrows=0
 autocmd vimenter * if !argc() | NERDTree | endif
