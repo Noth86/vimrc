@@ -13,4 +13,6 @@ Instructions:
 - Copy this vim file to ~/.vimrc
 - Launch vim, skip errors and run :BundleInstall
 
+To use jsHint see these instructions: https://github.com/wookiehangover/jshint.vim
+
 Ready!
