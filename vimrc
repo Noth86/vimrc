@@ -24,6 +24,7 @@ Bundle 'jtai/vim-womprat'
 
 " JSHint configuration
 let JSHintUpdateWriteOnly=1
+let g:JSHintHighlightErrorLine = 0
 
 " NERDTree configuration
 let g:NERDTreeDirArrows=0
