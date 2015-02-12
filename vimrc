@@ -14,6 +14,7 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
 Bundle 'itchyny/lightline.vim'
+Bundle 'wookiehangover/jshint.vim'
 
 " Active plugin
 filetype plugin indent on
