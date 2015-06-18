@@ -6,6 +6,9 @@ It will install:
 - lightline
 - jsHint.vim
 
+Dependencies:
+- https://github.com/powerline/fonts/tree/master/SourceCodePro
+
 Instructions:
 - Install NodeJs
 - Install jsHint
