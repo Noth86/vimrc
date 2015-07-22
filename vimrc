@@ -15,6 +15,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
 Bundle 'itchyny/lightline.vim'
 Bundle 'wookiehangover/jshint.vim'
+Bundle 'Raimondi/delimitMate'
 
 " Plugins
 Plugin 'kien/ctrlp.vim'
