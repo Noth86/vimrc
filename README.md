@@ -6,6 +6,7 @@ It will install:
 - lightline
 - jsHint
 - ctrlp
+- delimitMate
 
 Dependencies:
 - https://github.com/powerline/fonts/tree/master/SourceCodePro
