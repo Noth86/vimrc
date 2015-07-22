@@ -4,7 +4,8 @@ It will install:
 - nerdtree
 - vim-airline
 - lightline
-- jsHint.vim
+- jsHint
+- ctrlp
 
 Dependencies:
 - https://github.com/powerline/fonts/tree/master/SourceCodePro
