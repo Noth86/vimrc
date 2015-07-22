@@ -16,6 +16,9 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'itchyny/lightline.vim'
 Bundle 'wookiehangover/jshint.vim'
 
+" Plugins
+Plugin 'kien/ctrlp.vim'
+
 " Active plugin
 filetype plugin indent on
 
@@ -38,6 +41,8 @@ set noswapfile
 set smartindent
 set autoindent
 set expandtab
+set cursorline
+set cursorcolumn
 set hlsearch " Highlight search terms...
 set tabstop=4
 set laststatus=2
@@ -88,8 +93,7 @@ endfunction
 
 function! MyFilename()
   let fname = expand('%:t')
-  return fname == 'ControlP' ? g:lightline.ctrlp_item :
-        \ fname == '__Tagbar__' ? g:lightline.fname :
+  return fname == '__Tagbar__' ? g:lightline.fname :
         \ fname =~ '__Gundo\|NERD_tree' ? '' :
         \ &ft == 'vimfiler' ? vimfiler#get_status_string() :
         \ &ft == 'unite' ? unite#get_status_string() :
