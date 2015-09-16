@@ -2,11 +2,11 @@ It will install:
 - Vundle
 - vim-fugitive
 - nerdtree
-- vim-airline
 - lightline
 - jsHint
-- ctrlp
 - delimitMate
+- ctrlp
+- vim-womprat
 
 Dependencies:
 - https://github.com/powerline/fonts/tree/master/SourceCodePro
