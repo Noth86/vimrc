@@ -8,10 +8,8 @@ It will install:
 - ctrlp
 - vim-womprat
 
-Dependencies:
-- https://github.com/powerline/fonts/tree/master/SourceCodePro
-
 Instructions:
+- Install font
 - Install NodeJs
 - Install jsHint
 - git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
