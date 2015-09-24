@@ -49,7 +49,6 @@ set tabstop=4
 set laststatus=2
 set shiftwidth=4
 colorscheme womprat
-set ambiwidth=double
 set guifont=Source\ Code\ Pro\ for\ Powerline:h14
 
 " Powerline configuration
