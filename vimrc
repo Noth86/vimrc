@@ -61,6 +61,7 @@ au BufRead,BufNewFile *.*.js.yug setfiletype javascript
 
 au BufRead,BufNewFile *.css.yug setfiletype css
 au BufRead,BufNewFile *.*.css.yug setfiletype css
+au BufRead,BufNewFile *.scss set syntax=css
 
 " Lightline configuration
 let g:lightline = {
