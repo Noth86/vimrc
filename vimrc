@@ -30,6 +30,9 @@ Bundle 'jtai/vim-womprat'
 let JSHintUpdateWriteOnly=1
 let g:JSHintHighlightErrorLine = 0
 
+" Robot Framework configuration
+let g:robot_syntax_for_txt
+
 " NERDTree configuration
 let g:NERDTreeDirArrows=0
 autocmd vimenter * if !argc() | NERDTree | endif
