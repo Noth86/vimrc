@@ -7,13 +7,13 @@ It will install:
 - delimitMate
 - ctrlp
 - vim-womprat
+- robotframework-vim
 
 Instructions:
 - Install font
 - Install NodeJs (yum install nodejs)
 - Install jsHint (sudo ln -s /usr/local/node/node-default/bin/npm /usr/bin/npm && sudo npm install jshint)
 - git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-- git clone git://github.com/mfukar/robotframework-vim.git ~/.vim/bundle/robotframework-vim
 - Copy this vim file to ~/.vimrc
 - Launch vim, skip errors and run :BundleInstall
 

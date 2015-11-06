@@ -19,6 +19,7 @@ Bundle 'Raimondi/delimitMate'
 
 " Plugins
 Plugin 'kien/ctrlp.vim'
+Plugin 'mfukar/robotframework-vim'
 
 " Active plugin
 filetype plugin indent on
@@ -29,9 +30,6 @@ Bundle 'jtai/vim-womprat'
 " JSHint configuration
 let JSHintUpdateWriteOnly=1
 let g:JSHintHighlightErrorLine = 0
-
-" Robot Framework configuration
-let g:robot_syntax_for_txt
 
 " NERDTree configuration
 let g:NERDTreeDirArrows=0
