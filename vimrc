@@ -20,6 +20,7 @@ Bundle 'Raimondi/delimitMate'
 " Plugins
 Plugin 'kien/ctrlp.vim'
 Plugin 'mfukar/robotframework-vim'
+Plugin 'beyondwords/vim-twig'
 
 " Active plugin
 filetype plugin indent on
