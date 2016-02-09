@@ -10,11 +10,12 @@ It will install:
 - robotframework-vim
 
 Instructions:
-- Install font
+- Download and install font (Sauce Code Powerline Plus Nerd File Types Plus Pomicons.otf) on your host machine
 - Install NodeJs (yum install nodejs)
 - Install jsHint (sudo ln -s /usr/local/node/node-default/bin/npm /usr/bin/npm && sudo npm install jshint)
 - git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-- Copy this vim file to ~/.vimrc
+- git clone git@github.com:Noth86/vimrc.git ~/DotFiles
+- ln -s ~/Dotfiles/vimrc ~/.vimrc
 - Launch vim, skip errors and run :BundleInstall
 
 To use jsHint see these instructions: https://github.com/wookiehangover/jshint.vim
