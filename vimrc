@@ -19,8 +19,8 @@ Bundle 'Raimondi/delimitMate'
 
 " Plugins
 Plugin 'kien/ctrlp.vim'
-Plugin 'mfukar/robotframework-vim'
 Plugin 'beyondwords/vim-twig'
+Plugin 'mfukar/robotframework-vim'
 
 " Active plugin
 filetype plugin indent on
@@ -64,6 +64,8 @@ au BufRead,BufNewFile *.*.js.yug setfiletype javascript
 au BufRead,BufNewFile *.css.yug setfiletype css
 au BufRead,BufNewFile *.*.css.yug setfiletype css
 au BufRead,BufNewFile *.scss set syntax=css
+
+au BufNewFile,BufRead *.yaml,*.yml so ~/DotFiles/syntax/yaml.vim
 
 " Lightline configuration
 let g:lightline = {
