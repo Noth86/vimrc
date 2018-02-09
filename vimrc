@@ -19,6 +19,7 @@ Bundle 'Raimondi/delimitMate'
 
 " Plugins
 Plugin 'kien/ctrlp.vim'
+Plugin 'prettier/prettier'
 Plugin 'beyondwords/vim-twig'
 Plugin 'mfukar/robotframework-vim'
 
