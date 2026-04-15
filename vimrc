@@ -1,33 +1,34 @@
 set list
 set nowrap
 set nocompatible              " be iMproved
-filetype off                  " required!
 
-set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#rc()
+" vim-plug: auto-install if not present
+if empty(glob('~/.vim/autoload/plug.vim'))
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-" let Vundle manage Vundle
-" required!
-Bundle 'gmarik/vundle'
-
-" Bundles
-Bundle 'tpope/vim-fugitive'
-Bundle 'scrooloose/nerdtree'
-Bundle 'itchyny/lightline.vim'
-Bundle 'wookiehangover/jshint.vim'
-Bundle 'Raimondi/delimitMate'
+call plug#begin('~/.vim/bundle')
 
 " Plugins
-Plugin 'kien/ctrlp.vim'
-Plugin 'prettier/prettier'
-Plugin 'beyondwords/vim-twig'
-Plugin 'mfukar/robotframework-vim'
+Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/nerdtree'
+Plug 'itchyny/lightline.vim'
+Plug 'wookiehangover/jshint.vim'
+Plug 'Raimondi/delimitMate'
+Plug 'kien/ctrlp.vim'
+Plug 'prettier/prettier'
+Plug 'beyondwords/vim-twig'
+Plug 'mfukar/robotframework-vim'
+
+" Theme
+Plug 'jtai/vim-womprat'
+
+call plug#end()
 
 " Active plugin
 filetype plugin indent on
-
-" Theme
-Bundle 'jtai/vim-womprat'
 
 " JSHint configuration
 let JSHintUpdateWriteOnly=1
@@ -67,7 +68,7 @@ au BufRead,BufNewFile *.css.yug setfiletype css
 au BufRead,BufNewFile *.*.css.yug setfiletype css
 au BufRead,BufNewFile *.scss set syntax=css
 
-au BufNewFile,BufRead *.yaml,*.yml so ~/DotFiles/syntax/yaml.vim
+au BufNewFile,BufRead *.yaml,*.yml execute 'source ' . expand('<sfile>:p:h') . '/syntax/yaml.vim'
 
 " Lightline configuration
 let g:lightline = {

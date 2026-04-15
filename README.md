@@ -1,5 +1,5 @@
 It will install:
-- Vundle
+- vim-plug (self-bootstrapping plugin manager)
 - vim-fugitive
 - nerdtree
 - lightline
@@ -9,15 +9,52 @@ It will install:
 - vim-womprat
 - robotframework-vim
 
-Instructions:
-- Download and install font (Sauce Code Powerline Plus Nerd File Types Plus Pomicons.otf) on your host machine
-- Install NodeJs (sudo yum install nodejs)
-- Install jsHint (sudo npm install jshint -g) on debian: (sudo ln -s /usr/local/node/node-default/bin/npm /usr/bin/npm && sudo npm install jshint -g)
-- git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-- git clone git@github.com:Noth86/vimrc.git ~/DotFiles
-- sudo mv /etc/vimrc /etc/vimrc.old && sudo ln -s ~/DotFiles/vimrc /etc/vimrc
-- Launch vim, skip errors and run :BundleInstall
+## Quick install
 
-To use jsHint see these instructions: https://github.com/wookiehangover/jshint.vim
+```bash
+git clone git@github.com:Noth86/vimrc.git ~/DotFiles
+cd ~/DotFiles
+chmod +x install.sh
+./install.sh          # installs to ~/.vimrc
+sudo ./install.sh     # installs system-wide to /etc/vimrc (requires root)
+```
 
-Ready!
+The script will:
+1. Download **vim-plug** automatically (no manual Vundle clone needed)
+2. Back up any existing `vimrc` / `/etc/vimrc`
+3. Create a symlink pointing at this repo's `vimrc`
+4. Install all plugins non-interactively
+5. Warn if Node.js or jshint are missing
+
+## Font installation
+
+Download and install **Sauce Code Powerline Plus Nerd File Types Plus Pomicons.otf**
+(included in this repo) on your host machine:
+
+| OS      | Steps |
+|---------|-------|
+| **macOS**   | Double-click the `.otf` file → click **Install Font** |
+| **Linux**   | `cp "Sauce Code Powerline Plus Nerd File Types Plus Pomicons.otf" ~/.fonts && fc-cache -f -v` |
+| **Windows** | Right-click the `.otf` file → **Install** |
+
+## Optional: JavaScript linting (jsHint)
+
+Install Node.js and jshint to enable in-editor JS linting:
+
+```bash
+# Debian / Ubuntu (for the latest LTS, see https://github.com/nodesource/distributions)
+sudo apt install nodejs
+sudo npm install -g jshint
+
+# RHEL / CentOS / Fedora
+sudo yum install nodejs
+sudo npm install -g jshint
+
+# Debian workaround if npm is not in PATH
+sudo ln -s /usr/local/node/node-default/bin/npm /usr/bin/npm
+sudo npm install -g jshint
+```
+
+See also: https://github.com/wookiehangover/jshint.vim
+
+## Ready!
